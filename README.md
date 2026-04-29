@@ -1,14 +1,14 @@
-***Flight delays by part of day and cause***
+**Flight delays by part of day and cause**
 **Code**
 ```sql
-select 
+SELECT 
 	flights.dep_part_of_day as departure_part_of_day, 
 	SUM(flight_delays.delay_carrier_mins) / 60 as hours_of_aircraft_or_airline_delays,
 	SUM(flight_delays.delay_weather_mins) / 60 as hours_of_weather_delays,
 	SUM(flight_delays.delay_air_traffic_control_mins) / 60 as hours_of_ATC_delays,
 	SUM(flight_delays.delay_security_mins) / 60 as hours_of_security_delays,
 	SUM(flight_delays.delay_last_aircraft_mins) / 60 as hours_of_last_aircraft_delays
-from
+FROM
 	flights
 INNER JOIN
 	flight_delays on flight_delays.flight_id = flights.flight_id
