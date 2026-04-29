@@ -26,7 +26,8 @@ GROUP BY
 
 18:00–24:00 → Evening
 
-**Data refers to arrival and departure delays summed up as we are exploring flight delay data by the part of day and cause in this section.**
+**In this section, delays mean total amount of hours for both flight arrivals and departures. 
+The same flight can, logically, be late on both departure and arrival.**
 
 | dep_part_of_day | hours_of_aircraft_or_airline_delays | hours_of_weather_delays | hours_of_atc_delays |
 |-----------------|--------------------------------------|-------------------------|---------------------|
