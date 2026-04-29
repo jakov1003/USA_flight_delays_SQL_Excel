@@ -75,6 +75,8 @@ ORDER BY
 ```
 **Output**
 
+Larger ratio = better, smaller ratio = worse
+
 | dep_part_of_day | no_of_flights | hours_of_total_delays | flights_to_delay_hours_ratio |
 | --------------- | ------------- | --------------------- | ---------------------------- |
 | Evening         | 118,329       | 57,474                | 2.06                         |
