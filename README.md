@@ -22,7 +22,7 @@ GROUP BY
 	aircraft_age
 ORDER BY
 	no_of_flights DESC;
-```sql
+```
 
 **Output**
 | aircraft_age | no_of_flights |
