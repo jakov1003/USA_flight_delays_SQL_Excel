@@ -36,6 +36,44 @@ ORDER BY
 |    30-39     |     8970      |
 |     40+      |      268      |
 
+**Flight delays by airline**
+
+**Code**
+```sql
+SELECT
+	airlines.airline_name,
+	
+	(SUM(flights.dep_delay_mins) / 60) + (SUM(flights.arr_delay_mins) / 60) 
+	as hours_of_total_delays,
+	
+	COUNT(flight_id) as no_of_flights
+FROM
+	airlines
+INNER JOIN
+	flights on flights.airline_id = airlines.airline_id
+GROUP BY
+	airline_name
+ORDER BY
+	hours_of_total_delays DESC;
+```
+**Output**
+|        airline_name         | hours_of_total_delays | no_of_flights |
+|:---------------------------:|:---------------------:|:-------------:|
+| American Airlines Inc.      |        30878          |     73454     |
+| Southwest Airlines Co.      |        30777          |    108999     |
+| Delta Air Lines Inc         |        24322          |     74419     |
+| United Air Lines Inc.       |        20866          |     56102     |
+| Skywest Airlines Inc.       |        19954          |     48378     |
+| Spirit Air Lines            |        11561          |     21348     |
+| JetBlue Airways             |        10465          |     22978     |
+| Frontier Airlines Inc.      |        10048          |     12828     |
+| Endeavor Air                |         5354          |     16637     |
+| American Eagle Airlines Inc.|         4869          |     18325     |
+| Allegiant Air               |         4675          |      8478     |
+| Alaska Airlines Inc.        |         3091          |     19421     |
+| Hawaiian Airlines Inc.      |         1992          |      6616     |
+| PSA Airlines                |         1376          |     15165     |
+| Republic Airways            |          915          |     24049     |
 
 **Flight delays by part of day**
 
