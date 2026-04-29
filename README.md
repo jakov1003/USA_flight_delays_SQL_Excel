@@ -75,6 +75,8 @@ ORDER BY
 | PSA Airlines                |         1376          |     15165     |
 | Republic Airways            |          915          |     24049     |
 
+<img width="1536" height="1024" alt="0b31af99-20b2-4a63-b1b2-d3588fa60635" src="https://github.com/user-attachments/assets/e962638c-c1c9-43f0-94a2-fb67ea47631e" />
+
 **Flight delays by part of day**
 
 **Code**
