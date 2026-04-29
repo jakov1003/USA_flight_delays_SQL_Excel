@@ -42,3 +42,42 @@ The same flight can, logically, be late on both departure and arrival.**
 | Evening         | 167                      | 22380                           |
 | Morning         | 162                      | 18762                           |
 | Night           | 10                       | 883                             |
+
+**Flight delays by part of day**
+
+**Code**
+```sql
+WITH hours_of_delays as (
+SELECT
+	dep_part_of_day,
+	SUM(dep_delay_mins) / 60 as hours_of_departure_delays,
+	SUM(arr_delay_mins) / 60 as hours_of_arrival_delays,
+	COUNT(flight_id) as no_of_flights
+FROM
+	flights
+GROUP BY
+	dep_part_of_day
+)
+
+SELECT
+	dep_part_of_day,
+	no_of_flights,
+	
+	hours_of_departure_delays + hours_of_arrival_delays
+	as hours_of_total_delays,
+	
+	ROUND(no_of_flights * 1.0 / (hours_of_departure_delays + hours_of_arrival_delays), 2)
+	as flights_to_delay_hours_ratio
+FROM
+	hours_of_delays
+ORDER BY
+	flights_to_delay_hours_ratio ASC;
+```
+**Output**
+
+| dep_part_of_day | no_of_flights | hours_of_total_delays | flights_to_delay_hours_ratio |
+| --------------- | ------------- | --------------------- | ---------------------------- |
+| Evening         | 118,329       | 57,474                | 2.06                         |
+| Afternoon       | 188,313       | 74,727                | 2.52                         |
+| Morning         | 205,409       | 45,851                | 4.48                         |
+| Night           | 15,146        | 3,100                 | 4.89                         |
