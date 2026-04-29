@@ -46,7 +46,9 @@ The same flight can, logically, be late on both departure and arrival.**
 **Flight delays by part of day**
 
 **Code**
+
 ```sql
+
 WITH hours_of_delays as (
 SELECT
 	dep_part_of_day,
