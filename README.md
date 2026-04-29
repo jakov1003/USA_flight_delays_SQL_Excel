@@ -17,6 +17,14 @@ GROUP BY
 	dep_part_of_day;
 ```
 **Output**
+
+00:00–06:00 → Night
+06:00–12:00 → Morning
+12:00–18:00 → Afternoon
+18:00–24:00 → Evening
+
+**Data refers to arrival and departure delays summed up as we are investigating it by cause in this section.**
+
 | dep_part_of_day | hours_of_aircraft_or_airline_delays | hours_of_weather_delays | hours_of_atc_delays |
 |-----------------|--------------------------------------|-------------------------|---------------------|
 | Afternoon       | 23924                                | 3494                    | 17321               |
