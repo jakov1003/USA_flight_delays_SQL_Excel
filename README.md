@@ -19,11 +19,14 @@ GROUP BY
 **Output**
 
 00:00–06:00 → Night
+
 06:00–12:00 → Morning
+
 12:00–18:00 → Afternoon
+
 18:00–24:00 → Evening
 
-**Data refers to arrival and departure delays summed up as we are investigating it by cause in this section.**
+**Data refers to arrival and departure delays summed up as we are exploring flight delay data by the part of day and cause in this section.**
 
 | dep_part_of_day | hours_of_aircraft_or_airline_delays | hours_of_weather_delays | hours_of_atc_delays |
 |-----------------|--------------------------------------|-------------------------|---------------------|
