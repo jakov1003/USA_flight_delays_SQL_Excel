@@ -94,7 +94,9 @@ ORDER BY
 ```
 
 **Output**
-<img width="2400" height="1400" alt="aircraft_efficiency_v3" src="https://github.com/user-attachments/assets/b88b57ec-ee7b-46b5-8367-1a6e59490cdc" />
+
+<img width="1935" height="840" alt="cropped_chart_v2" src="https://github.com/user-attachments/assets/caac6651-386f-4578-8118-7c102deaf277" />
+
 
 
 **Flight delays by part of day**
