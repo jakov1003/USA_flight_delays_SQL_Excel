@@ -94,15 +94,22 @@ ORDER BY
 **Output**
 
 Night = 00:00–06:00
+
 Morning = 06:00–12:00
+
 Afternoon = 12:00–18:00
+
 Evening = 18:00–24:00
 
 Larger ratio = better, smaller ratio = worse.
 
+<div align="center">
+
 | dep_part_of_day | no_of_flights | hours_of_total_delays | flights_to_delay_hours_ratio |
-| --------------- | ------------- | --------------------- | ---------------------------- |
+|:---------------:|:-------------:|:---------------------:|:----------------------------:|
 | Evening         | 118,329       | 57,474                | 2.06                         |
 | Afternoon       | 188,313       | 74,727                | 2.52                         |
 | Morning         | 205,409       | 45,851                | 4.48                         |
 | Night           | 15,146        | 3,100                 | 4.89                         |
+
+</div>
