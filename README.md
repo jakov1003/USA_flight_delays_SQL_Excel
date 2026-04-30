@@ -1,6 +1,6 @@
-**1.Do American citizens fly with old aircraft?**
+## 1.Do American citizens fly with old aircraft?
 
-**Code**
+### 1.1.Code
 ```sql
 SELECT
 	CASE 
@@ -24,7 +24,7 @@ ORDER BY
 	no_of_flights DESC;
 ```
 
-**Output**
+### 1.2.Output
 | aircraft_age | no_of_flights |
 |:------------:|:-------------:|
 |     5-9      |    145346     |
@@ -36,9 +36,10 @@ ORDER BY
 |    30-39     |     8970      |
 |     40+      |      268      |
 
-**Flight delays by airline**
 
-**Code**
+## 2.Flight delays by airline
+
+### 2.1.Code
 ```sql
 SELECT
 	airlines.airline_name,
@@ -56,12 +57,13 @@ GROUP BY
 ORDER BY
 	hours_of_total_delays DESC;
 ```
-**Output**
+### 2.2.Output
+
 <img width="1536" height="1024" alt="flight delays graph" src="https://github.com/user-attachments/assets/ede6aaa5-9028-4fc3-96ac-6b1d44c9df8e" />
 
-**Flight delays by aircraft type**
+## 3.Flight delays by aircraft type
 
-**Code**
+### 3.1.Code
 
 ```sql
 WITH hours_of_delays as (
@@ -93,15 +95,14 @@ ORDER BY
 	flights_to_delay_hours_ratio ASC;
 ```
 
-**Output**
+### 3.2.Output
 
 <img width="1935" height="840" alt="cropped_chart_v2" src="https://github.com/user-attachments/assets/caac6651-386f-4578-8118-7c102deaf277" />
 
 
+## 4.Flight delays by part of day
 
-**Flight delays by part of day**
-
-**Code**
+### 4.1.Code
 
 ```sql
 
@@ -131,7 +132,7 @@ FROM
 ORDER BY
 	flights_to_delay_hours_ratio ASC;
 ```
-**Output**
+### 4.2.Output
 
 Night = 00:00–06:00
 
