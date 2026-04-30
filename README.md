@@ -59,6 +59,44 @@ ORDER BY
 **Output**
 <img width="1536" height="1024" alt="flight delays graph" src="https://github.com/user-attachments/assets/ede6aaa5-9028-4fc3-96ac-6b1d44c9df8e" />
 
+**Flight delays by aircraft type**
+
+**Code**
+
+```sql
+WITH hours_of_delays as (
+SELECT
+	aircrafts.manufacturer || ' ' || aircrafts.model AS aircraft_type,
+	SUM(flights.dep_delay_mins) / 60 as hours_of_departure_delays,
+	SUM(flights.arr_delay_mins) / 60 as hours_of_arrival_delays,
+	COUNT(flights.flight_id) as no_of_flights
+FROM
+	aircrafts
+INNER JOIN
+	flights on flights.aircraft_id = aircrafts.aircraft_id
+GROUP BY
+	aircraft_type
+)
+
+SELECT
+	aircraft_type,
+	no_of_flights,
+	
+	hours_of_departure_delays + hours_of_arrival_delays
+	as hours_of_total_delays,
+	
+	ROUND(no_of_flights * 1.0 / (hours_of_departure_delays + hours_of_arrival_delays), 2)
+	as flights_to_delay_hours_ratio
+FROM
+	hours_of_delays
+ORDER BY
+	flights_to_delay_hours_ratio ASC;
+```
+
+**Output**
+<img width="2400" height="1400" alt="aircraft_efficiency_v3" src="https://github.com/user-attachments/assets/b88b57ec-ee7b-46b5-8367-1a6e59490cdc" />
+
+
 **Flight delays by part of day**
 
 **Code**
