@@ -41,6 +41,12 @@ ORDER BY
 
 ### 2.1.Code
 ```sql
+
+-- I've left gaps between certain lines of code and wrote
+-- the 'AS' part on another line intentionally.
+-- IMO, the length of the line containing multiple mathematical
+-- operations and one 'AS' keyword would have made the whole code look awkward.
+
 SELECT
 	airlines.airline_name,
 	
