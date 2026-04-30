@@ -1,18 +1,23 @@
 ## 0.Introduction
 
 ### 0.1.Tools
+
 **(Postgre)SQL**
 
 **pgAdmin 4**
+
 For this project, I did not use VS Code due to time-related reasons. The connections and uploads would taken significantly more time. I therefore queried the data in pgAdmin.
 
 **GitHub** 
+
 I wrote the entire README file on GitHub itself. What I said about omitting VS Code applies to GitHub as well.
 
 **Excel**
+
 Import, export, copy, and paste operations.
 
 **AI - ChatGPT, Perplexity, NotebookLM**
+
 I had AI tools write me the code for splitting the raw CSV file from Kaggle into multpile PostgreSQL database tables and filling those those tables with data. I also used them to create the two graphs contained within this project. The data queries were all written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters.
 
 
