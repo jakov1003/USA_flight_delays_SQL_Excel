@@ -42,10 +42,11 @@ ORDER BY
 ### 2.1.Code
 ```sql
 
--- I've left gaps between certain lines of code and wrote
--- the 'AS' part on another line intentionally.
--- IMO, the length of the line containing multiple mathematical
--- operations and one 'AS' keyword would have made the whole code look awkward.
+-- I have left gaps between certain lines of code
+-- and written the "AS" part on another line intentionally.
+-- In my opinion, the length of the line containing multiple
+-- mathematical operations and one "AS" keyword would have
+-- made the whole code look awkward.
 
 SELECT
 	airlines.airline_name,
@@ -72,13 +73,12 @@ ORDER BY
 ### 3.1.Code
 
 ```sql
--- I'm well-aware that I should have probably written
--- the SELECT statement within "WITH" inlined.
--- I would have fixed it if I were doing this as part of
--- my job. I hope to display critical thinking rather than sloppiness
--- by leaving it.
--- The same thing applies for section 4.1. in addition to
--- what I have already written there.
+
+-- I am well aware that I should have probably written the SELECT
+-- statement within "WITH" inlined.
+-- I would have fixed it if I were doing this as part of my job.
+-- I hope to display critical thinking rather than sloppiness by leaving it.
+-- The same applies to section 4.1 in addition to what I have already written there.
 
 WITH hours_of_delays as (
 SELECT
@@ -120,10 +120,11 @@ ORDER BY
 
 ```sql
 
--- I've left gaps between certain lines of code and wrote
--- the 'AS' part on another line intentionally.
--- IMO, the length of the line containing multiple mathematical
--- operations and one 'AS' keyword would have made the whole code look awkward.
+-- I have left gaps between certain lines of code
+-- and written two "AS" keywords on another line intentionally.
+-- In my opinion, the length of the lines containing multiple
+-- mathematical operations and two "AS" keywords would have
+-- made the whole code look awkward.
 
 WITH hours_of_delays as (
 SELECT
