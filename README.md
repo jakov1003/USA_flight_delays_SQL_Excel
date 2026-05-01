@@ -4,25 +4,9 @@ I had been wanting to do another data, SQL, and Excel-themed project for several
 
 The dataset I used is a subset of this [broad Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. Even this sole file cotains plenty of data on flight delays from the United States of America from 2023.
 
-I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the database schema below. I've also uploaded the raw unsplit CSV file and the post-split CSVs within this project.
+I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the database schema below. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
 
-**(Postgre)SQL**
-
-**pgAdmin 4**
-
-For this project, I did not use VS Code due to time-related reasons. The connections and uploads would taken significantly more time. I therefore queried the data in pgAdmin.
-
-**GitHub** 
-
-I wrote the entire README file on GitHub itself. What I said about omitting VS Code applies to GitHub as well.
-
-**Excel**
-
-Import, export, copy, and paste operations.
-
-**AI - ChatGPT, Perplexity, NotebookLM**
-
-I had AI tools write me the code for splitting the raw CSV file from Kaggle into multpile PostgreSQL database tables and filling those those tables with data. I also used them to create the two graphs contained within this project. The data queries were all written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters.
+<img width="1093" height="686" alt="schema_5" src="https://github.com/user-attachments/assets/37cf721b-83f7-4fbc-83b8-d1cd6b377ca1" />
 
 
 ## 1.Do American citizens fly with old aircraft?
@@ -198,5 +182,25 @@ Larger ratio = better, smaller ratio = worse.
 | Afternoon       | 188,313       | 74,727                | 2.52                         |
 | Morning         | 205,409       | 45,851                | 4.48                         |
 | Night           | 15,146        | 3,100                 | 4.89                         |
+
+## 5.Tools
+
+**(Postgre)SQL**
+
+**pgAdmin 4**
+
+For this project, I did not use VS Code due to time-related reasons. The connections and uploads would taken significantly more time. I therefore queried the data in pgAdmin.
+
+**GitHub** 
+
+I wrote the entire README file on GitHub itself. What I said about omitting VS Code applies to GitHub as well.
+
+**Excel**
+
+Import, export, copy, and paste operations.
+
+**AI - ChatGPT, Perplexity, NotebookLM**
+
+I had AI tools write me the code for splitting the raw CSV file from Kaggle into multpile PostgreSQL database tables and filling those those tables with data. I also used them to create the two graphs contained within this project. The data queries were all written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters.
 
 
