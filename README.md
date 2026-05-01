@@ -12,7 +12,9 @@ I split the CSV into multiple PostgreSQL database tables, which I then queried. 
 The dep_airport_id and arr_airport_id mapping onto airport_id in the airports table simply means that every airport has its own unique ID, which can act as both a departure and arrival airport ID. There are no duplicates and errouneous applications of primary and foreign keys.
 </details>
 
-## 1.Do American citizens fly with old aircraft?
+<details>
+<summary> ## 1.Do American citizens fly with old aircraft? </summary>
+
 
 ### 1.1.Code
 ```sql
@@ -52,8 +54,13 @@ ORDER BY
 |    30-39     |     8970      |
 |     40+      |      268      |
 
+**Insight**
+The oldest aircraft are at the bottom of the frequency pile. However, the answer to the section title question is not a resounding NO, as aircrafts aged 20-24 and 15-19 are/have been more commonly used than those aged 5-9 and 0-4.
 
-## 2.Flight delays by airline
+</details>
+
+<details>
+<summary>## 2.Flight delays by airline</summary>
 
 ### 2.1.Code
 ```sql
@@ -84,7 +91,13 @@ ORDER BY
 
 <img width="1536" height="1024" alt="flight delays graph" src="https://github.com/user-attachments/assets/ede6aaa5-9028-4fc3-96ac-6b1d44c9df8e" />
 
-## 3.Flight delays by aircraft type
+**Insight**
+It's clear that more flights does not always correlate with the amount of delay hours.
+
+</details>
+
+<details>
+<summary>## 3.Flight delays by aircraft type</summary>
 
 ### 3.1.Code
 
@@ -129,8 +142,15 @@ ORDER BY
 
 <img width="1935" height="840" alt="cropped_chart_v2" src="https://github.com/user-attachments/assets/caac6651-386f-4578-8118-7c102deaf277" />
 
+**Insight**
+I purposefully haven't shown everything from the query on the graph. It seems complicated, but it actually isn't. 
 
-## 4.Flight delays by part of day
+You can also look at this graph as "How many flights would aircraft type have to make to achieve 1000 delay hours over the course of a year?". The answer would be, for example, 5740 flights for Boeing 717 and 1130 flights for Boeing 737.
+
+</details>
+
+<details>
+<summary>## 4.Flight delays by the part of day</summary>
 
 ### 4.1.Code
 
@@ -178,9 +198,9 @@ Afternoon = 12:00–18:00
 
 Evening = 18:00–24:00
 
+**What part of the day was the most problematic for US commercial aviation in 2023?**
 Larger ratio = better, smaller ratio = worse.
 
-**What part of day was the most problematic for US civil aviation in 2023?**
 | dep_part_of_day | no_of_flights | hours_of_total_delays | flights_to_delay_hours_ratio |
 |:---------------:|:-------------:|:---------------------:|:----------------------------:|
 | Evening         | 118,329       | 57,474                | 2.06                         |
@@ -188,7 +208,13 @@ Larger ratio = better, smaller ratio = worse.
 | Morning         | 205,409       | 45,851                | 4.48                         |
 | Night           | 15,146        | 3,100                 | 4.89                         |
 
-## 5.Tools
+**Insight**
+Evening is/was most problematic, but the difference between evening and night is stark, regardless of whether the hours map perfectly or not.
+
+</details>
+
+<details>
+<summary>## 5.Tools</summary>
 
 **(Postgre)SQL**
 
@@ -198,7 +224,7 @@ For this project, I did not use VS Code due to time-related reasons. The connect
 
 **GitHub** 
 
-I wrote the entire README file on GitHub itself. What I said above about omitting VS Code applies to GitHub as well. 
+I wrote the entire README file on GitHub itself. What I said above about omitting VS Code applies to GitHub too. 
 
 **Excel**
 
@@ -206,6 +232,7 @@ Import, export, copy, and paste operations.
 
 **AI - ChatGPT, Perplexity, NotebookLM**
 
-I used AI tools to split the raw CSV file from Kaggle into multpile PostgreSQL database tables and fill those those tables with data. I also used them to create the two graphs found within this project. The data queries were all written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters. This README file was entirely written by myself.
+I used AI tools to split the raw CSV file into multpile PostgreSQL database tables and fill those tables with data. I also used them to create the two graphs found within this project. The data queries and this README file were both entirely written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters.
 
+</details>
 
