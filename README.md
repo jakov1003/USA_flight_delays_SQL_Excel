@@ -1,13 +1,16 @@
 ## 0.Project & dataset introduction
 
-I had been wanting to do another data, SQL, and Excel-themed project for several months now. After finally finding some time to do so, I settled on an aviation industry dataset, because free workable datasets are difficult to find. Kaggle's decent, but many datasets on there are either overly clean/messy or too large/small.
+I had been wanting to do another data, SQL, and Excel-themed project for several months now. After in-depth dataset research, I settled on one covering commerical aviation flight delays in the US from 2023.
 
-The dataset I used is a subset of this [broad Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. Even this sole file contains plenty of data on flight delays from the United States of America in 2023.
+The aforementioned dataset is a subset of this [broader Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. It does not cover every single US commerical airline, flight and delay, however, most delayed flights from major US commerical airlines are included. 
 
 I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the database schema below. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
 
+<details>
+<summary> USA Flight Delays 2023, Entity Relationship Diagram of the database </summary>
 <img width="1093" height="686" alt="schema_5" src="https://github.com/user-attachments/assets/37cf721b-83f7-4fbc-83b8-d1cd6b377ca1" />
-
+The dep_airport_id and arr_airport_id mapping onto airport_id in the airports table simply means that every airport has its own unique ID, which can act as both a departure and arrival airport ID. There are no duplicates and errouneous applications of primary and foreign keys.
+</details>
 
 ## 1.Do American citizens fly with old aircraft?
 
@@ -191,11 +194,11 @@ Larger ratio = better, smaller ratio = worse.
 
 **pgAdmin 4**
 
-For this project, I did not use VS Code due to time-related reasons. The connections and uploads would taken significantly more time. I therefore queried the data in pgAdmin.
+For this project, I did not use VS Code due to time-related reasons. The connections and uploads would have taken a significant amount of time to set up. I therefore queried the data in pgAdmin 4.
 
 **GitHub** 
 
-I wrote the entire README file on GitHub itself. What I said about omitting VS Code applies to GitHub as well.
+I wrote the entire README file on GitHub itself. What I said above about omitting VS Code applies to GitHub as well. 
 
 **Excel**
 
@@ -203,6 +206,6 @@ Import, export, copy, and paste operations.
 
 **AI - ChatGPT, Perplexity, NotebookLM**
 
-I had AI tools write me the code for splitting the raw CSV file from Kaggle into multpile PostgreSQL database tables and filling those those tables with data. I also used them to create the two graphs contained within this project. The data queries were all written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters.
+I used AI tools to split the raw CSV file from Kaggle into multpile PostgreSQL database tables and fill those those tables with data. I also used them to create the two graphs found within this project. The data queries were all written by myself. I did not just blindly accept the AI tools' responses - I further prompted them to both correct and clarify specific matters. This README file was entirely written by myself.
 
 
