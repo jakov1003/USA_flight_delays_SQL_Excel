@@ -1,6 +1,10 @@
-## 0.Introduction
+## 0.Project & dataset introduction
 
-### 0.1.Tools
+I had been wanting to do another data, SQL, and Excel-themed project for several months now. After finally finding some time to do so, I settled on an aviation industry dataset, because free workable datasets are difficult to find. Kaggle's decent, but many datasets on there are either overly clean/messy or too large/small.
+
+The dataset I used is a subset of this [broad Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. Even this sole file cotains plenty of data on flight delays from the United States of America from 2023.
+
+I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the database schema below. I've also uploaded the raw unsplit CSV file and the post-split CSVs within this project.
 
 **(Postgre)SQL**
 
