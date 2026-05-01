@@ -60,7 +60,7 @@ The oldest aircraft are at the bottom of the frequency pile. However, the answer
 </details>
 
 <details>
-<summary>**2.Flight delays by airline**</summary>
+<summary><b>2.Flight delays by airline**</b></summary>
 
 ### 2.1.Code
 ```sql
@@ -97,7 +97,7 @@ It's clear that more flights does not always correlate with the amount of delay 
 </details>
 
 <details>
-<summary>**3.Flight delays by aircraft type**</summary>
+<summary><b>3.Flight delays by aircraft type</b></summary>
 
 ### 3.1.Code
 
@@ -150,7 +150,7 @@ You can also look at this graph as "How many flights would aircraft type have to
 </details>
 
 <details>
-<summary>**4.Flight delays by the part of day**</summary>
+<summary><b>4.Flight delays by the part of day</b></summary>
 
 ### 4.1.Code
 
@@ -214,7 +214,7 @@ Evening is/was most problematic, but the difference between evening and night is
 </details>
 
 <details>
-<summary>**5.Tools**</summary>
+<summary><b>5.Tools</b></summary>
 
 **(Postgre)SQL**
 
