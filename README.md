@@ -13,7 +13,7 @@ The dep_airport_id and arr_airport_id mapping onto airport_id in the airports ta
 </details>
 
 <details>
-<summary> **1.Do American citizens fly with old aircraft?** </summary>
+<summary> <b>1.Do American citizens fly with old aircraft?</b> </summary>
 
 
 ### 1.1.Code
