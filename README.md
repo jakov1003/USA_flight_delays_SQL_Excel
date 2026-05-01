@@ -2,7 +2,7 @@
 
 I had been wanting to do another data, SQL, and Excel-themed project for several months now. After finally finding some time to do so, I settled on an aviation industry dataset, because free workable datasets are difficult to find. Kaggle's decent, but many datasets on there are either overly clean/messy or too large/small.
 
-The dataset I used is a subset of this [broad Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. Even this sole file cotains plenty of data on flight delays from the United States of America from 2023.
+The dataset I used is a subset of this [broad Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. Even this sole file contains plenty of data on flight delays from the United States of America in 2023.
 
 I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the database schema below. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
 
@@ -36,6 +36,8 @@ ORDER BY
 ```
 
 ### 1.2.Output
+
+**American Civilan Aircraft by Age and Number of Flights, 2023**
 | aircraft_age | no_of_flights |
 |:------------:|:-------------:|
 |     5-9      |    145346     |
@@ -175,7 +177,7 @@ Evening = 18:00–24:00
 
 Larger ratio = better, smaller ratio = worse.
 
-
+**What part of day was the most problematic for US civil aviation in 2023?**
 | dep_part_of_day | no_of_flights | hours_of_total_delays | flights_to_delay_hours_ratio |
 |:---------------:|:-------------:|:---------------------:|:----------------------------:|
 | Evening         | 118,329       | 57,474                | 2.06                         |
