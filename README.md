@@ -1,4 +1,4 @@
-## 0.Project & dataset introduction
+## Project & dataset introduction
 
 I had been wanting to do another data, SQL, and Excel-themed project for several months now. After in-depth dataset research, I settled on one covering commerical aviation flight delays in the US from 2023.
 
@@ -13,7 +13,7 @@ The dep_airport_id and arr_airport_id mapping onto airport_id in the airports ta
 </details>
 
 <details>
-<summary> ## 1.Do American citizens fly with old aircraft? </summary>
+<summary> **1.Do American citizens fly with old aircraft?** </summary>
 
 
 ### 1.1.Code
@@ -60,7 +60,7 @@ The oldest aircraft are at the bottom of the frequency pile. However, the answer
 </details>
 
 <details>
-<summary>## 2.Flight delays by airline</summary>
+<summary>**2.Flight delays by airline**</summary>
 
 ### 2.1.Code
 ```sql
@@ -97,7 +97,7 @@ It's clear that more flights does not always correlate with the amount of delay 
 </details>
 
 <details>
-<summary>## 3.Flight delays by aircraft type</summary>
+<summary>**3.Flight delays by aircraft type**</summary>
 
 ### 3.1.Code
 
@@ -150,7 +150,7 @@ You can also look at this graph as "How many flights would aircraft type have to
 </details>
 
 <details>
-<summary>## 4.Flight delays by the part of day</summary>
+<summary>**4.Flight delays by the part of day**</summary>
 
 ### 4.1.Code
 
@@ -214,7 +214,7 @@ Evening is/was most problematic, but the difference between evening and night is
 </details>
 
 <details>
-<summary>## 5.Tools</summary>
+<summary>**5.Tools**</summary>
 
 **(Postgre)SQL**
 
