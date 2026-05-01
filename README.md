@@ -6,7 +6,7 @@ The aforementioned dataset is a subset of this [broader Kaggle dataset](https://
 
 I split the CSV into multiple PostgreSQL database tables, which I then queried. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
 
-Click the dropdown triangle for the section you wish to see. Sections 2. and 3. have graphs, sections 1. and 4. have tables. Graphs are more pleasing on the eye, while tables allow you to showcase more data (which may sometimes be necessary).
+**Click the dropdown triangle for the section you wish to see. Sections 2. and 3. have graphs, sections 1. and 4. have tables.** Graphs are more pleasing on the eye, while tables allow you to showcase more data (which may sometimes be necessary).
 
 <details>
 <summary> USA Flight Delays 2023, Entity Relationship Diagram of the database </summary>
