@@ -4,7 +4,7 @@ I had been wanting to do another data, SQL, and Excel-themed project for several
 
 The aforementioned dataset is a subset of this [broader Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. It does not cover every single US commerical airline, flight and delay, however, most delayed flights from major US commerical airlines are included. 
 
-I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the database schema below. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
+I split the CSV into multiple PostgreSQL database tables, which I then queried. You can find the entity relationship diagram below. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
 
 <details>
 <summary> USA Flight Delays 2023, Entity Relationship Diagram of the database </summary>
