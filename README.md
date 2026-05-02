@@ -97,6 +97,7 @@ ORDER BY
 <img width="1536" height="1024" alt="commercial_delays" src="https://github.com/user-attachments/assets/36f85ac5-8d73-4486-b225-4049be3dc0c8" />
 
 
+
 **Insight**
 
 It's clear that more flights does not always correlate with the amount of delay hours.
@@ -148,6 +149,7 @@ ORDER BY
 ### 3.2.Output
 
 <img width="1935" height="840" alt="cropped_chart_v2" src="https://github.com/user-attachments/assets/caac6651-386f-4578-8118-7c102deaf277" />
+
 
 **Insight**
 
