@@ -1,8 +1,8 @@
 ## Project & dataset introduction
 
-I had been wanting to do another data, SQL, and Excel-themed project for several months now. After in-depth dataset research, I settled on one covering **domestic** commerical aviation flight delays in the US from 2023.
+I had been wanting to do another data, SQL, and Excel-themed project for several months now. After in-depth dataset research, I settled on one covering **domestic** commercial aviation flight delays in the US from 2023.
 
-The aforementioned dataset is a subset of this [broader Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. It does not cover every single **domestic** US commerical airline, flight and delay, however, most **domestic** delayed flights from major US commerical airlines are included. 
+The aforementioned dataset is a subset of this [broader Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. It does not cover every single **domestic** US commercial airline, flight and delay, however, most **domestic** delayed flights from major US commercial airlines are included. 
 
 I split the CSV into multiple PostgreSQL database tables, which I then queried. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database. I had to zip some files, owing to GitHub's 25MB file size upload limit.
 
@@ -113,7 +113,7 @@ It's clear that more flights does not always correlate with the amount of delay 
 -- further inlined the code within the WITH statement below.
 -- I would have fixed it if I were doing this as part of my job.
 -- I hope to display critical thinking rather than sloppiness by leaving it.
--- The same applies to section 4.1 in addition to what I have already written there.
+-- The same applies to section 4.1. in addition to what I have already written there.
 
 WITH hours_of_delays as (
 SELECT
@@ -150,7 +150,7 @@ ORDER BY
 
 **Insight**
 
-I purposefully did not include the entire output on the graph. It seems complicated, but it actually isn't. 
+I purposefully did not display the entire query output on the graph. It seems complicated, but it actually isn't. 
 
 You can also look at this graph as "How many flights would an aircraft type have to make to amass 1000 delay hours over the course of a year?". The answer would be, for example, 5740 flights for Boeing 717 and 1130 flights for Boeing 737.
 
@@ -233,7 +233,7 @@ For this project, I did not use VS Code due to time-related reasons. The connect
 
 **GitHub** 
 
-I wrote the entire README file on GitHub itself. What I said above about omitting VS Code applies to GitHub as well. 
+I wrote the entire README file on GitHub itself. What I said above about omitting VS Code with regards to pgAdmin applies to GitHub as well. 
 
 **Excel**
 
