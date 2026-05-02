@@ -94,7 +94,8 @@ ORDER BY
 ```
 ### 2.2.Output
 
-<img width="1536" height="1024" alt="flight delays graph" src="https://github.com/user-attachments/assets/ede6aaa5-9028-4fc3-96ac-6b1d44c9df8e" />
+<img width="1536" height="1024" alt="commercial_delays" src="https://github.com/user-attachments/assets/36f85ac5-8d73-4486-b225-4049be3dc0c8" />
+
 
 **Insight**
 
