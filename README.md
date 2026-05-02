@@ -225,7 +225,6 @@ Evening is/was the most problematic, but the difference between evening and nigh
 <details>
 <summary><b>5.Tools</b></summary>
 
-
 **(Postgre)SQL**
 
 **pgAdmin 4**
