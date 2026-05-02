@@ -1,17 +1,19 @@
 ## Project & dataset introduction
 
-I had been wanting to do another data, SQL, and Excel-themed project for several months now. After in-depth dataset research, I settled on one covering commerical aviation flight delays in the US from 2023.
+I had been wanting to do another data, SQL, and Excel-themed project for several months now. After in-depth dataset research, I settled on one covering **domestic** commerical aviation flight delays in the US from 2023.
 
-The aforementioned dataset is a subset of this [broader Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. It does not cover every single US commerical airline, flight and delay, however, most delayed flights from major US commerical airlines are included. 
+The aforementioned dataset is a subset of this [broader Kaggle dataset](https://www.kaggle.com/datasets/bordanova/2023-us-civil-flights-delay-meteo-and-aircraft?select=maj+us+flight+-+january+2024.csv). The file is called maj us flight - january 2024. It does not cover every single **domestic** US commerical airline, flight and delay, however, most **domestic** delayed flights from major US commerical airlines are included. 
 
 I split the CSV into multiple PostgreSQL database tables, which I then queried. I've also uploaded the raw unsplit CSV file, the post-split CSV files, and the .SQL dump of the database.
 
-**Click the dropdown triangle for the section you wish to see. Sections 2. and 3. have graphs, sections 1. and 4. have tables.** Graphs are more pleasing on the eye, while tables allow you to showcase more data (which may sometimes be necessary).
+**Click the dropdown triangle of the section you wish to see. Sections 2. and 3. come with graphs, sections 1. and 4. have tables.** 
+
+Graphs are more pleasing on the eye, while tables allow you to showcase more data (which may sometimes be necessary).
 
 <details>
-<summary> USA Flight Delays 2023, Entity Relationship Diagram of the database </summary>
+<summary> 0.USA Flight Delays 2023, Entity Relationship Diagram of the database </summary>
 <img width="1093" height="686" alt="schema_5" src="https://github.com/user-attachments/assets/37cf721b-83f7-4fbc-83b8-d1cd6b377ca1" />
-The dep_airport_id and arr_airport_id mapping onto airport_id in the airports table simply means that every airport has its own unique ID, which can act as both a departure and arrival airport ID. There are no duplicates and errouneous applications of primary and foreign keys.
+The dep_airport_id and arr_airport_id mapping onto airport_id in the airports table simply means that every airport has its own unique ID, which can act as both a departure and an arrival airport ID. There are no duplicates and erroneous applications of primary and foreign keys.
 </details>
 
 <details>
@@ -44,7 +46,7 @@ ORDER BY
 
 ### 1.2.Output
 
-**American Civilan Aircraft by Age and Number of Flights, 2023**
+**American Civilian Aircraft by Age and Number of Flights, 2023**
 | aircraft_age | no_of_flights |
 |:------------:|:-------------:|
 |     5-9      |    145346     |
@@ -71,7 +73,7 @@ The oldest aircraft are at the bottom of the frequency pile. However, the answer
 -- and written the "AS" part on another line intentionally.
 -- In my opinion, the length of the line containing multiple
 -- mathematical operations and one "AS" keyword would have
--- made the whole code look awkward.
+-- made the entire block of code look awkward.
 
 SELECT
 	airlines.airline_name,
@@ -145,9 +147,9 @@ ORDER BY
 <img width="1935" height="840" alt="cropped_chart_v2" src="https://github.com/user-attachments/assets/caac6651-386f-4578-8118-7c102deaf277" />
 
 **Insight**
-I purposefully haven't shown everything from the query on the graph. It seems complicated, but it actually isn't. 
+I purposefully did not include the entire output on the graph. It seems complicated, but it actually isn't. 
 
-You can also look at this graph as "How many flights would aircraft type have to make to achieve 1000 delay hours over the course of a year?". The answer would be, for example, 5740 flights for Boeing 717 and 1130 flights for Boeing 737.
+You can also look at this graph as "How many flights would an aircraft type have to make to amass 1000 delay hours over the course of a year?". The answer would be, for example, 5740 flights for Boeing 717 and 1130 flights for Boeing 737.
 
 </details>
 
@@ -162,7 +164,7 @@ You can also look at this graph as "How many flights would aircraft type have to
 -- and written two "AS" keywords on another line intentionally.
 -- In my opinion, the length of the lines containing multiple
 -- mathematical operations and two "AS" keywords would have
--- made the whole code look awkward.
+-- made the entire block of code look awkward.
 
 WITH hours_of_delays as (
 SELECT
@@ -200,7 +202,7 @@ Afternoon = 12:00–18:00
 
 Evening = 18:00–24:00
 
-**What part of the day was the most problematic for US commercial aviation in 2023?**
+**What part of the day was the most problematic for US domestic commercial aviation in 2023?**
 Larger ratio = better, smaller ratio = worse.
 
 | dep_part_of_day | no_of_flights | hours_of_total_delays | flights_to_delay_hours_ratio |
@@ -211,7 +213,7 @@ Larger ratio = better, smaller ratio = worse.
 | Night           | 15,146        | 3,100                 | 4.89                         |
 
 **Insight**
-Evening is/was most problematic, but the difference between evening and night is stark, regardless of whether the hours map perfectly or not.
+Evening is/was the most problematic, but the difference between evening and night is stark, regardless of whether the hours map perfectly or not.
 
 </details>
 
@@ -226,7 +228,7 @@ For this project, I did not use VS Code due to time-related reasons. The connect
 
 **GitHub** 
 
-I wrote the entire README file on GitHub itself. What I said above about omitting VS Code applies to GitHub too. 
+I wrote the entire README file on GitHub itself. What I said above about omitting VS Code applies to GitHub as well. 
 
 **Excel**
 
